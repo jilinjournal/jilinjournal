@@ -3,79 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jilin Journal - Online Academic Periodical</title>
+    <title>Journal of Jilin University (Engineering and Technology Edition)</title>
+    
+    <!-- OTOMATİK SEO AYARLARI (Google ve Akademik İndeksler İçin) -->
+    <meta name="description" content="Journal of Jilin University (Engineering and Technology Edition) - 吉林大学学报(工学版) - Official Open Access Academic Periodical.">
+    <meta name="keywords" content="Jilin University, Journal of Jilin University, 吉林大学学报, Engineering, Technology Journal, Academic Manuscript">
+    <meta name="robots" content="index, follow">
+    
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
-        header { background-color: #0b3c5d; color: white; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid #328cc1; }
-        header h1 { margin: 0; font-size: 24px; font-weight: bold; }
-        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; }
-        nav a:hover { color: #d9b310; }
-        .container { display: flex; max-width: 1200px; margin: 20px auto; padding: 0 20px; gap: 20px; }
-        main { flex: 3; background: white; padding: 30px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        aside { flex: 1; background: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); height: fit-content; text-align: center; }
-        .scimago-box { border: 1px solid #ddd; padding: 15px; border-radius: 5px; background: #fafafa; margin-bottom: 20px; }
-        .scimago-box img { max-width: 100%; height: auto; cursor: pointer; transition: transform 0.2s; }
-        .scimago-box img:hover { transform: scale(1.03); }
-        .article { border-bottom: 1px solid #eee; padding: 20px 0; }
-        .article:last-child { border-bottom: none; }
-        .article h3 { margin: 0 0 10px 0; color: #0b3c5d; font-size: 18px; }
-        .authors { font-style: italic; color: #666; margin-bottom: 10px; font-size: 14px; }
-        .links a { display: inline-block; margin-right: 15px; text-decoration: none; color: #328cc1; font-weight: bold; font-size: 14px; }
-        .links a:hover { color: #0b3c5d; }
-        .submit-banner { background: #d9b310; color: #0b3c5d; padding: 15px; font-weight: bold; border-radius: 5px; margin-bottom: 20px; text-align: center; }
+        body { font-family: "Times New Roman", Times, serif, Arial; margin: 0; padding: 0; background-color: #fafafa; color: #111; line-height: 1.6; }
+        
+        /* Gerçek Jilin Üniversitesi Kurumsal Mavi Renk Yapısı */
+        .top-bar { background-color: #3D6091; color: white; padding: 6px 50px; font-size: 13px; display: flex; justify-content: space-between; }
+        .top-bar a { color: #fff; text-decoration: none; margin-left: 15px; }
+        
+        header { background-color: #fff; padding: 25px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #3D6091; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+        .logo-area h1 { margin: 0; font-size: 26px; color: #3D6091; font-weight: bold; }
+        .logo-area h2 { margin: 5px 0 0 0; font-size: 16px; color: #555; font-weight: normal; font-style: italic; }
+        
+        nav { background-color: #2c3e50; padding: 10px 50px; display: flex; }
+        nav a { color: #fff; text-decoration: none; margin-right: 25px; font-size: 15px; font-weight: bold; text-transform: uppercase; }
+        nav a:hover { color: #97ABB9; }
+        
+        .container { display: flex; max-width: 1250px; margin: 25px auto; padding: 0 20px; gap: 30px; }
+        main { flex: 3; background: white; padding: 30px; border: 1px solid #e1e1e1; border-radius: 3px; }
+        aside { flex: 1; background: #fff; padding: 20px; border: 1px solid #e1e1e1; border-radius: 3px; height: fit-content; }
+        
+        h3.section-title { border-bottom: 2px solid #3D6091; padding-bottom: 8px; color: #3D6091; margin-top: 0; font-size: 20px; }
+        
+        /* Makale ve Arşiv Listesi Düzeni */
+        .article-block { padding: 18px 0; border-bottom: 1px dashed #ddd; }
+        .article-block:last-child { border-bottom: none; }
+        .article-block h4 { margin: 0 0 8px 0; font-size: 17px; color: #3D6091; cursor: pointer; }
+        .article-block h4:hover { text-decoration: underline; }
+        .article-meta { font-size: 13px; color: #555; margin-bottom: 8px; }
+        .article-meta span { margin-right: 15px; }
+        .btn-link { display: inline-block; background: #eff6f8; border: 1px solid #97ABB9; padding: 3px 10px; font-size: 12px; color: #3D6091; text-decoration: none; margin-right: 8px; border-radius: 2px; font-weight: bold; }
+        .btn-link:hover { background: #3D6091; color: white; border-color: #3D6091; }
+        
+        .sidebar-widget { margin-bottom: 25px; }
+        .sidebar-widget h4 { background: #3D6091; color: white; padding: 8px 12px; margin: 0 0 12px 0; font-size: 15px; }
+        .submit-box { background: #f7f9fb; border: 1px dashed #3D6091; padding: 15px; text-align: center; font-size: 14px; }
+        .scimago-img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
 
+<div class="top-bar">
+    <div>吉林大学学报(工学版) / ISSN: 1671-5497</div>
+    <div>
+        <a href="#">中文</a> | <a href="#">English</a>
+    </div>
+</div>
+
 <header>
-    <h1>Jilin Journal</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Archives</a>
-        <a href="#">Submit Manuscript</a>
-    </nav>
+    <div class="logo-area">
+        <h1>Journal of Jilin University</h1>
+        <h2>(Engineering and Technology Edition)</h2>
+    </div>
 </header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Current Issue</a>
+    <a href="#">Archives</a>
+    <a href="#">Editorial Board</a>
+    <a href="#">Submit Manuscript</a>
+</nav>
 
 <div class="container">
     <main>
-        <h2>Current Issue: Volume 15, Issue 1 (2026)</h2>
-        <hr>
+        <h3 class="section-title">Current Issue: Vol. 56 No. 4 (2026)</h3>
         
-        <!-- Örnek Makale 1 -->
-        <div class="article">
-            <h3>Analysis of Neural Network Optoelectronics in Engineering Systems</h3>
-            <div class="authors">Authors: Zhang W., Smith J., Kovac A.</div>
-            <div class="links">
-                <a href="#">[Abstract]</a>
-                <a href="#">[PDF Download]</a>
+        <!-- ÖRNEK MAKALE 1 -->
+        <div class="article-block">
+            <h4>Experimental Study on Mechanical Properties of Advanced Composite Materials in Automotive Engineering</h4>
+            <div class="article-meta">
+                <span><strong>Authors:</strong> Wang L., Zhou X., Kim Y.</span>
+                <span><strong>Pages:</strong> 412-420</span>
+            </div>
+            <div>
+                <a href="#" class="btn-link">[Abstract]</a>
+                <a href="#" class="btn-link">[PDF Full-Text]</a>
             </div>
         </div>
 
-        <!-- Örnek Makale 2 -->
-        <div class="article">
-            <h3>Sustainable Development and Lifecycle Management in Industrial Geomatics</h3>
-            <div class="authors">Authors: Li X., El-Amin M.</div>
-            <div class="links">
-                <a href="#">[Abstract]</a>
-                <a href="#">[PDF Download]</a>
+        <!-- ÖRNEK MAKALE 2 -->
+        <div class="article-block">
+            <h4>Optimization of Neural Network Control Systems for Deep-Sea Technology Operations</h4>
+            <div class="article-meta">
+                <span><strong>Authors:</strong> Liu H., Zhao M.</span>
+                <span><strong>Pages:</strong> 421-432</span>
+            </div>
+            <div>
+                <a href="#" class="btn-link">[Abstract]</a>
+                <a href="#" class="btn-link">[PDF Full-Text]</a>
             </div>
         </div>
+        
     </main>
 
     <aside>
-        <div class="submit-banner">
-            Submit your manuscript to:<br>
-            <span style="font-size: 14px; font-family: monospace;">editor@jilinjournal.org</span>
+        <div class="sidebar-widget">
+            <h4>Manuscript Submission</h4>
+            <div class="submit-box">
+                Send your papers to:<br>
+                <strong style="color: #3D6091; font-family: monospace; display:block; margin-top:5px;">editor@jilinjournal.org</strong>
+            </div>
         </div>
-        
-        <div class="scimago-box">
-            <h4>SCImago Journal Rank</h4>
-            <!-- Resmi SCImago logolarına yönlendiren tıkla-git görsel alanı -->
+
+        <div class="sidebar-widget" style="text-align: center;">
+            <h4>Journal Metrics</h4>
             <a href="https://scimagojr.com" target="_blank">
-                <img src="https://scimagojr.com/journal_img.php?id=21100224345" alt="SCImago Journal Rank">
+                <img src="https://scimagojr.com/journal_img.php?id=21100224345" class="scimago-img" alt="SCImago Journal Rank">
             </a>
-            <p style="font-size: 12px; color: #777; margin-top: 10px;">Click to view metrics</p>
         </div>
     </aside>
 </div>
