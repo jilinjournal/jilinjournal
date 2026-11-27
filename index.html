@@ -1474,8 +1474,8 @@
                     var encodedUrl = encodeURI(item.url);
                     itemsHtml += '<div class="article-row">' +
                         '<div class="article-info">' +
-                            '<h5>' + item.title.split('—')[0].trim() + '</h5>' +
-'<p>' + item.author + '</p>' +
+                            '<h5>' + item.title + '</h5>' +
+                            '<p>' + item.author + ' &bull; File: ' + item.filename + '</p>' +
                         '</div>' +
                         '<div class="action-btns">' +
                             '<a href="' + encodedUrl + '" target="_blank" rel="noopener noreferrer" class="btn-view">View PDF</a>' +
