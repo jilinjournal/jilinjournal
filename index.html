@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal of Jilin University / Jilin Daxue Xuebao</title>
+    <script src="https://tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        @import url('https://googleapis.com');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Merriweather', serif;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+    <!-- Top Announcement Bar -->
+    <div class="bg-blue-600 text-white text-xs sm:text-sm py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium">
+                <span class="bg-blue-800 text-blue-100 text-[10px] uppercase font-bold px-2 py-0.5 rounded-full">Announcement</span>
+                <span>As of December 2026, the journal has officially transitioned to the Monthly Publication Model.</span>
+            </div>
+            <button onclick="switchTab('announcements')" class="underline hover:text-blue-100 text-xs font-semibold whitespace-nowrap">
+                Read Details &rarr;
+            </button>
+        </div>
+    </div>
+    <!-- Main Header -->
+    <header class="bg-slate-900 text-white border-b-4 border-blue-600 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold shadow-md">
+                        JJU
+                    </div>
+                    <div>
+                        <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-100">Journal of Jilin University <span class="text-blue-400 font-normal text-xl sm:text-2xl block sm:inline">/ Jilin Daxue Xuebao</span></h1>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-0.5">Engineering and Technology Edition / Multidisciplinary | International Peer-Reviewed Open Access Academic Journal</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-3 text-xs text-slate-300 border-t border-slate-800 lg:border-t-0 pt-3 lg:pt-0">
+                    <div class="bg-slate-800 px-3 py-1.5 rounded border border-slate-700">
+                        <span class="text-slate-400 block text-[10px] uppercase font-semibold">ISSN (Online)</span>
+                        <span class="font-mono text-blue-400 font-bold">1671-5497</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Content Area -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1 space-y-6">
+                <!-- Navigation Card -->
+                <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-100 px-4 py-3 border-b border-slate-200 font-bold text-slate-800 text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-bars text-blue-600"></i> Navigation
+                    </div>
+                    <nav class="p-2 space-y-1">
+                        <button onclick="switchTab('home')" id="nav-home" class="nav-btn w-full text-left px-3 py-2.5 rounded-md text-sm font-medium transition flex items-center justify-between bg-blue-50 text-blue-900 border-l-4 border-blue-600">
+                            <span><i class="fa-solid fa-house w-6 text-slate-400"></i> Home</span>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-300"></i>
+                        </button>
+                        <button onclick="switchTab('aims-scope')" id="nav-aims-scope" class="nav-btn w-full text-left px-3 py-2.5 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-50 transition flex items-center justify-between">
+                            <span><i class="fa-solid fa-bullseye w-6 text-slate-400"></i> Aims & Scope</span>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-300"></i>
+                        </button>
+                        <button onclick="switchTab('announcements')" id="nav-announcements" class="nav-btn w-full text-left px-3 py-2.5 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-50 transition flex items-center justify-between">
+                            <span><i class="fa-solid fa-bullhorn w-6 text-slate-400"></i> Announcements</span>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-300"></i>
+                        </button>
+                        <button onclick="switchTab('ethics')" id="nav-ethics" class="nav-btn w-full text-left px-3 py-2.5 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-50 transition flex items-center justify-between">
+                            <span><i class="fa-solid fa-scale-balanced w-6 text-slate-400"></i> Ethics & Policies</span>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-300"></i>
+                        </button>
+                        <button onclick="switchTab('submission')" id="nav-submission" class="nav-btn w-full text-left px-3 py-2.5 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-50 transition flex items-center justify-between">
+                            <span><i class="fa-solid fa-paper-plane w-6 text-slate-400"></i> Manuscript Submission</span>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-300"></i>
+                        </button>
+                        <button onclick="switchTab('statistics')" id="nav-statistics" class="nav-btn w-full text-left px-3 py-2.5 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-50 transition flex items-center justify-between">
+                            <span><i class="fa-solid fa-chart-pie w-6 text-slate-400"></i> Statistics & Metrics</span>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-300"></i>
+                        </button>
+                        
+                        <div class="pt-2 border-t border-slate-100"></div>
+                        <!-- Archive -->
+                        <button onclick="switchTab('archive')" id="nav-archive" class="nav-btn w-full text-left px-3 py-2.5 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-50 transition flex items-center justify-between">
+                            <span><i class="fa-solid fa-box-archive w-6 text-blue-600"></i> Archive</span>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-300"></i>
+                        </button>
+                    </nav>
+                </div>
+                <!-- Fast Article Submission Box -->
+                <div class="bg-slate-900 text-white rounded-lg p-5 shadow-sm space-y-3 border-t-4 border-blue-600">
+                    <h3 class="font-bold text-base flex items-center gap-2">
+                        <i class="fa-solid fa-envelope-open-text text-blue-400"></i> Submit Manuscript
+                    </h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Submit your research paper directly to our editorial team via email:
+                    </p>
+                    <div class="bg-slate-800 p-2.5 rounded border border-slate-700 text-center">
+                        <a href="mailto:editor@jilinjournal.org" class="text-xs font-mono font-bold text-blue-400 hover:underline break-all">
+                            editor@jilinjournal.org
+                        </a>
+                    </div>
+                </div>
+                <!-- SCImago Journal & Country Rank Widget -->
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-center space-y-2">
+                    <h4 class="font-bold text-xs text-slate-700 uppercase tracking-wider">SCImago Journal Rank</h4>
+                    <div class="flex justify-center py-1">
+                        <a href="https://scimagojr.com" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener noreferrer">
+                            <img border="0" src="scimago.png" onerror="this.onerror=null; this.src='https://scimagojr.com';" alt="SCImago Journal &amp; Country Rank" class="h-28 w-auto mx-auto hover:opacity-95 transition shadow-sm rounded" />
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="lg:col-span-3">
+                
+                <!-- TAB 1: HOME -->
+                <div id="tab-home" class="tab-content active space-y-6">
+                    <div class="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-slate-200">
+                        <span class="text-blue-700 font-bold text-xs uppercase tracking-wider block mb-1">Welcome</span>
 
